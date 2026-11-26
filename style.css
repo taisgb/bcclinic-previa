@@ -20,3 +20,23 @@
 @keyframes ribbon-flow{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(max-width:760px){.procedure-ribbons{height:170px}.ribbon{height:44px;top:calc(50% - 22px);width:124%;left:-12%}.ribbon-back{transform:rotate(8deg)}.ribbon-front{transform:rotate(-8deg)}.ribbon-group span{font-size:24px;padding:0 16px}.ribbon-pause{width:30px;height:30px;bottom:5px;right:10px}}
 @media(prefers-reduced-motion:reduce){.ribbon-track{animation:none!important}.ribbon-pause{display:none}}
+
+/* Transição integrada à hero, cruzamento assimétrico. */
+.hero{padding-bottom:26px}
+.procedure-ribbons{margin-top:-30px;height:clamp(106px,11vw,160px);background:transparent;z-index:3;overflow:hidden}
+.ribbon{height:46px;width:120%;left:-10%;box-shadow:0 5px 12px #43291822}
+.ribbon-back{top:calc(50% - 18px);transform:rotate(3deg);transform-origin:72% 50%;border-radius:0}
+.ribbon-front{top:calc(50% - 27px);transform:rotate(-3deg);transform-origin:72% 50%;border-radius:0}
+.ribbon-group span{font-size:clamp(20px,2vw,28px);padding:0 20px}
+.ribbon-pause{bottom:4px;right:12px;width:26px;height:26px;font-size:11px}
+.methods{padding-top:48px}
+@media(max-width:760px){
+ .hero{padding-bottom:28px}
+ .procedure-ribbons{margin-top:-24px;height:112px}
+ .ribbon{height:35px;width:126%;left:-13%}
+ .ribbon-back{top:calc(50% - 12px);transform:rotate(5deg)}
+ .ribbon-front{top:calc(50% - 19px);transform:rotate(-5deg)}
+ .ribbon-group span{font-size:20px;padding:0 14px}
+ .methods{padding-top:32px}
+ .ribbon-pause{bottom:3px;right:8px}
+}
